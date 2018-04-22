@@ -1,0 +1,378 @@
+/*
+	B00107907 Declan McGuire
+	Web Development 1
+	CA2 Assignment - Website Project
+	March/April 2018
+*/
+
+/* ------------------------------- Clear formatting in browser ---------------------------------- */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* ------------------------------- Generic Body styling ----------------------------------------- */
+
+/* All colours referenced from:
+https://www.w3schools.com/colors/colors_names.asp   */
+
+body {
+    width: 1024px;								/* Set width to 1024 pixels */
+    margin: auto;								/* Margin auto to centre content on screen */
+    font-family: Verdana, Arial, sans-serif;	/* Fonts in order of preference */
+    background-color: #FFFFFF;					/* Page background colour */
+}
+
+body h1 {				/* Styling for <h1> tag */
+	color: #00005D;		/* Colour for <h1> tag */
+}
+
+body h2 {				/* Styling for <h2> tag */
+	font-size: medium;
+	color: #4169E1;		/* Colour for <h2> tag */
+	margin: 10px 0px; 	/* Margin top & bottom for <h2> tag */
+}
+
+body p {				/* Styling for <p> tag */
+	margin: 10px 0px; 	/* 10 pixels top & bottom, no margin left & right */
+	font-size: 11pt;	/* Font size 11 point */
+	color: #2F4F4F;		/* A dark grey that's almost-but-not-quite-black */
+
+}
+
+/* ------------------------------- Header Bar (top of page) --------------------------------------*/
+
+/* 
+	Our header bar div will hold a background image comprising of a default image and some page-
+	specific banners. These banner images will have a text overlay. The class name will mirror the 
+	page name in the CSS; E.g. class .sitemap will be on the sitemap.html page.
+*/
+
+header {													/* General styling for header div */
+ 	width: 100%;											/* Width 100% of body */
+ 	height: 250px;											/* Height 250 pixels */
+ 	margin-bottom: 0px;										/* ensure no gap to nav bar */
+ 	background-image: url('../images/banner_homepage.jpg');	/* default background */
+}
+
+header h1 {													/* General styling for Title text */
+	color: yellow;											/* It'll be Yellow */
+	font-size: 36pt;										/* Big and easy to read */
+	padding-top: 80px;										/* 80 pixels from top edge */	
+	text-align: center;										/* Centre aligned on Div */
+	text-shadow: -2px 1px #000000;							/* with a shadow for legibility */
+}
+
+header h2 {													/* General styling for subtitle text */
+	color: yellow;											/* Yellow in common with title */
+	text-align: center;										/* Centre aligned below Title text */
+	font-style: italic;										/* Italic style */
+	font-size: 16pt;
+	text-shadow: -2px 1px #000000;							/* Text shadow as before */
+}
+
+.sitemap {
+	background-image: url('../images/banner_sitemap.jpg');	/* site map page banner image */
+}
+
+.who {
+	background-image: url('../images/banner_who.jpg');		/* Who page banner image */
+}
+
+.why {
+	background-image: url('../images/banner_why.jpg');		/* Why page banner image */
+}
+
+.learn {
+	background-image: url('../images/banner_learn.jpg');	/* Learn page banner image */
+}
+
+.brands {
+	background-image: url('../images/banner_brands.jpg');	/* Brands page banner image */
+}
+
+.advice {
+	background-image: url('../images/banner_advice.jpg');	/* Advice page banner image */
+}
+
+.contact {
+	background-image: url('../images/banner_contact.jpg');	/* Contact page banner image */
+}
+
+
+
+
+
+/* ------------------------------- Navigation Bar ----------------------------------------------- */
+
+nav {							/* Styling for nav semantic container */
+	position: sticky;			/* Scroll with content until top of screen */
+	top: 0px;					/* then stay against on top edge */
+    background-color: #404040;	/* Change background to dark grey */
+    width: 100%;				/* set to match page width */
+}
+
+nav ul {
+    list-style-type: none;		/* Remove ul list bullet points */
+    margin: 0px;				/* No margin, abuts other elements */
+    overflow: hidden;			/* Prevent list elements going outside of the container (clipped) */
+}
+
+nav li {
+    float: left;				/* Display Navbar list items horizontally */
+    width: 128px;				/* From page width (1024px)/number of <li> elements (8) which then
+    							provides even spacing & consumes 100% width of nav content area.  */
+}
+
+nav li a {
+	display: block;				/* Make whole link area clickable, not just the word */
+	text-decoration: none;		/* Remove hyper link underlines */
+	padding: 10px 0px;			/* Padding nav bar: 10 pixels top & bottom, 0 pixels left & right */
+	color: #FFFFFF;				/* Make Nav text white */
+	text-align: center;			/* Centre Nav text in container element */
+}
+
+nav li a:hover {				/* When mouse hovers over nav list item... */
+    background-color: #87CEEB;	/* ...change background colour to sky blue */
+    color: #000080;				/* ...change text colour to navy blue */
+}
+
+.currentpage {					/* For the 'currentpage' class identifier... */
+	background-color: #4169E1;	/* ...set the navbar text background to royal blue */
+}
+
+
+/* ------------------------------- Footer Bar, common to all pages ------------------------------ */
+
+footer {						/* Container (semantic div) */
+	clear: left;				/* Brand boxes on brand page left a hanging float */
+	color: #FFFFFF;				/* Text colour to white */
+	background-color: #404040;	/* Background Grey to match nav bar */
+	margin-bottom: 5px;			/* Slight gap under, helps stop user trying to scroll past footer */
+}
+
+
+/* ----- Our <footer> div is a container for 3 more divs styled here ------ */
+
+.footerleft {					/* Footer left side div */
+	display: inline-block;		/* display inline-block for horizontal, simpler than float left */
+	width: 15%;					/* set div to 15% page width */
+    margin: 10px;				/* set margin to 10 pixels */
+}
+
+.footerleft a {					/* Footer left hyper links need... */
+	text-decoration: none;		/* ...underlines removed & */
+	color: #FFFFFF;				/* colour set to white. */
+}
+
+.footermiddle {					/* Footer middle div */
+	width: 65%;					/* 65% page width (allowing for margins, so not 70%) */
+	display: inline-block;		/* for horizontal placement */
+	text-align: center;			/* and centre align the text */
+}
+
+.footermiddle p {
+	color: #FFFFFF;				/* colour set to white. */
+}
+
+.footerright {					/* Footer right side div, structure mirrors left side */
+	display: inline-block;		/* for horizontal placement */
+	text-decoration: none;		/* Hyperlink underlines removed */
+	width: 15%;					/* Div width to be 15% of page */
+	text-align: right;			/* Text to right side of Div */
+}
+
+.footerright a {				/* Footer right hyper links need... */
+	text-decoration: none;		/* ...underlines removed & */
+	color: #FFFFFF;				/* colour set to white. */
+}
+
+/* -------------------------------- Section Specific Styling ------------------------------------ */
+
+/* ---- Sitemap page ---- */
+
+.s1sitemap ol {					/* s1 is section 1, sitemap is the page */
+	list-style-type: none;		/* remove bullet points from list */
+	margin-left: 60px;			/* offset 160 pixels from left */
+	font-size: 11pt;			/* To match body text */
+}
+
+.s1sitemap ul {					/* s1 is section 1, sitemap is the page */
+	list-style-type: none;		/* remove bullet points from list */
+	margin-left: 120px;			/* offset 160 pixels from left */
+	font-size: 11pt;			/* To match body text */
+}
+
+.s1sitemap a {
+	text-decoration: none;		/* remove underlines from hyperlinks */
+	color: #4169E1;				/* set the text colour to royal blue */
+}
+
+
+/* ---- Home page ---- */
+
+#s1home, #s3home {				/* Home page section 1 & 3 images */
+	float: right;
+	margin-left: 10px;
+}
+
+#s2home {						/* Home page section 2 image */
+	float: left;
+	margin-right: 10px;
+}
+
+#s3homeul {						/* Home page UL in section 3 */
+	margin-left: 150px;
+	font-size: small;
+	font-style: italic;
+	text-decoration: none;
+}
+
+/* ---- Who? page ---- */
+
+#who_author {					/* Author image on Who? page */
+	float: right;
+	margin-left: 10px;
+}
+
+
+/* ---- Why? page ---- */
+
+#s1whyimg {						/* Why? page section 1 image */
+	float: left;
+	margin: 10px 20px 5px 0px;
+}
+
+#s2whyimg {						/* Why? page section 2 image */
+	float: right;
+	margin: 0px 0px 10px 20px;
+}
+
+/* ---- Learn page ---- */
+
+#learnlist {					/* Ordered list on Learn page */
+	margin-left: 120px;
+	font-size: 11pt;
+	color: #2F4F4F;	
+}
+
+/* ---- Brand page ---- */
+
+.brandbox {						/* Divs to hold brand logos on Brands page */
+    float: left;     
+    width: 230px;
+    height: 250px;
+    margin: 10px;
+    border: 3px solid #4169E1;	
+    display: flex;				/* Alignment method for jpg files in boxes */
+    align-items: center;		/* was sourced from W3schools.com CSS tutor */
+    justify-content: center;	/* and modified to suit our implementation */
+}
+
+.brandbox:hover { 				/* Mouseover for boxes on brands page */
+    border: 3px solid red;
+    opacity: 0.8;
+}
+
+/* ---- advice.html page ---- */
+
+.advicebox {					/* Divs to hold info on Advice page */
+    float: left;     
+    width: 306px;
+    height: 280px;
+    margin: 10px;
+    border: 3px solid #4169E1;	
+    display: flex;				/* Alignment method for jpg files in boxes */
+    align-items: center;		/* was sourced from W3schools.com CSS tutor */
+    justify-content: center;	/* and modified to suit our implementation */
+}
+
+.advicebox:hover { 				/* Mouseover for boxes on advice page */
+    border: 3px solid red;
+    opacity: 0.8;
+}
+
+.advicebox-title {				/* titles over advice boxes on advice page */
+	text-decoration: none;
+	display: inline-block;
+	padding-left: 110px;
+	padding-right: 110px;
+}
+
+/* ---- advice-buying.html page ---- */
+
+.bikediv {						/* Styles the 8 No. .bikediv blocks on the bike-buying page */
+	margin: 25px 0;
+	clear: both;				/* Prevent overlaps */
+	overflow:hidden; 			/* Tidy up the layout */
+}
+
+.bikediv a {
+	color: #4169E1;
+	font-size: 80%;
+}
+
+.bikediv h2 {					/* Change h2's to red for discrimination in body text */
+	color: red;
+}
+
+.bikeimg {
+	float: left;				/* Float bike images to left, text will go to right */
+	margin: 0px 25px 20px 20px;	/* Margins for the image to offset from other elements */
+	width: 250px;				/* Images scaled to 250 pixels wide */
+	height: auto;				/* Height proportionate to width. */
+}
+
+/* ---- advice-insurance.html page ---- */
+
+.insurancelist {				/* Styles mixed list on insurance page */
+	margin-left: 50px;
+	color: #2F4F4F;				/* A dark grey that's almost-but-not-quite-black */
+}
+
+.insurancelist ul {				/* Styles ul for mixed list on insurance page */
+	margin-left: 80px;
+	color: #2F4F4F;	
+}
+
+.gear_left_img {				/* Advice>Gear page left-aligned image */
+	float: left;
+	margin: 10px 20px 5px 0px;
+}
+
+.gear_right_img {				/* Advice>Gear page right-aligned image */
+	float: right;
+	margin: 0px 0px 10px 20px;
+}
+
+/* -------------------------------- Aside Specific Styling -------------------------------------- */
+
+/*
+
+The Aside tag has been re-purposed throughout the site to provide a flash box for highlighting 
+key content or concepts. The box heading is typically "Did you know?" and the class id taken
+from this title.
+
+*/
+
+aside h2 {
+	font-style: italic;
+}
+
+.didyouknow {
+	background-color: #FAFAD2;
+	padding: 10px;
+	margin: 30px;
+	border: 2px solid red;
+}
+
+.didyouknow p {
+	color: #000000;
+}
+/* -------------------------------- Breadcrumb links on advice pages ----------------------------*/
+
+.breadcrumb p {
+	color: #4169E1;
+	font-size: 80%;
+}

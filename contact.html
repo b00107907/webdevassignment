@@ -1,0 +1,102 @@
+<!-- 
+	B00107907 Declan McGuire
+	Web Development 1
+	CA2 Assignment - Website Project
+	March/April 2018
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Contact Page</title>
+		<link href="css/stylesheet.css" rel="stylesheet">
+	</head>
+
+	<body id="top">  <!-- id as target for internal link from footer -->
+
+		<header class="contact">
+			<h1>Contact</h1>
+			<h2>It's good to talk</h2>
+		</header>
+		
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~ Navigation Block - Common to all pages ~~~~~~~~~~~~~~~~~~~~~~ -->
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="who.html">Who?</a></li>
+				<li><a href="why.html">Why?</a></li>
+				<li><a href="learn.html">Learn</a></li>
+				<li><a href="brands.html">Brands</a></li>
+				<li><a href="advice.html">Advice</a></li>
+				<li><a href="sitemap.html">Site map</a></li>
+				<li><a href="contact.html" class="currentpage">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~ Page Content ~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<!--
+			The bulk of the content for this page will be produced as part of CA4.
+			The page will be populated with the appropriate contact details and a 
+			suitable form in line with the requirements of CA4 in due course.
+
+		-->
+
+		<section>
+			<h1>>>> Under Construction <<<<</h1>
+			<h2>Contact</h2>
+			<p>Full contact page is coming soon.</p>
+			<p>For now you can <a href="mailto:declan.mcguire@gmail.com">email me</a>.
+		</section>
+
+		<div class="contactform">
+			<form action="mailto:b00107907@student.itb.ie" method="post">
+				Name:<br>
+				<label class="sub">First name: </label>
+				<input type="text" name="firstname" required placeholder="Enter first name" autofocus>
+				<label class="sub">Second name: </label>
+				<input type="text" name="secondname" required placeholder="Enter second name">
+				<br>
+				e-mail: <input type="email" name="email" required placeholder="Email address"><br>
+				Question or Comment: <textarea id="comment" rows="5" columns="60" name="comment" required placeholder="Your question or comment here..." ></textarea>
+				<br>
+				<input id="send" class="button_text" type="submit" name="submit" value="Submit" />
+				<button type="reset" value="Reset">Reset</button>
+			</form>
+		</div>
+		
+		<br><hr><br>
+		
+		<div class="survey">
+			<form action="mailto:b00107907@student.itb.ie" method="post">
+				<fieldset>
+					<legend>Take our short survey!</legend>
+					<br>
+					<textarea></textarea>
+				</fieldset>
+			</form>
+			
+
+
+
+
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~ Footer Block - Common to all pages ~~~~~~~~~~~~~~~~~~~~~~ -->
+		<footer>
+			<div class="footerleft">
+				<p><a href="#top">^ Back to Top</a></p>
+			</div>
+			
+			<div class="footermiddle">
+				<p>&copy; Copyright 2018<br>
+				Last updated 14 April 2018</p>
+			</div>
+			
+			<div class="footerright">
+				<p><a href="sitemap.html">Site map</a></p>
+			</div>
+		</footer>
+
+	</body>
+</html>
